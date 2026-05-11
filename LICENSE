@@ -24,7 +24,54 @@ SOFTWARE.
 
 # 免责声明 / Disclaimer
 
-本仓库所有代码仅供个人学习、研究使用，不保证适用于任何生产环境。
+## 学习目的声明 / Learning Purpose
 
-All code in this repository is for personal learning and research purposes only.
-No guarantee of fitness for any production use.
+本仓库所有代码、文档、仿真结果均为个人学习产出，
+仅供个人学习、研究使用。虽有 MIT 协议授权，
+但强烈建议不要直接用于生产环境、商业产品或安全关键系统。
+
+All code, documentation, and simulation results in this repository
+are personal learning output for educational and research purposes only.
+Use in production, commercial products, or safety-critical systems
+is strongly discouraged.
+
+## 硬件安全声明 / Hardware Safety
+
+FPGA / 数字电路代码的错误可能导致：
+- 时序违例引起系统不稳定
+- 过流 / 过热导致硬件物理损坏
+- 数据丢失或损坏
+
+使用者自行承担全部风险。作者不对因使用本代码造成的任何
+硬件损坏、数据丢失、财产损失负责。
+
+Errors in FPGA/digital circuit code may cause system instability,
+physical hardware damage, or data loss. Use entirely at your own risk.
+The author assumes no liability for any damages.
+
+## 第三方知识产权 / Third-Party IP
+
+本仓库中提及或调用的 Xilinx/AMD IP 核、原语、库组件，
+其知识产权归其各自所有者所有。本仓库不包含也不分发
+任何第三方 IP 核的源代码、网表或配置文件。
+
+Xilinx/AMD IP cores, primitives, and library components referenced
+herein are the intellectual property of their respective owners.
+This repository does NOT contain or distribute any third-party
+IP core source code, netlists, or configuration files.
+
+## 工具与厂商关系 / No Affiliation
+
+本仓库提及的软件工具和硬件平台名称归各自商标所有者所有。
+本仓库与 AMD/Xilinx、Siemens EDA、正点原子等无任何关联、
+赞助或背书关系。
+
+All tool and platform names are trademarks of their respective owners.
+This repository is not affiliated with, sponsored by, or endorsed by
+any of the companies or organizations mentioned.
+
+## 适用法律 / Governing Law
+
+本声明适用中华人民共和国法律。
+
+This disclaimer is governed by the laws of the People's Republic of China.
