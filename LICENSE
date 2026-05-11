@@ -26,14 +26,17 @@ SOFTWARE.
 
 ## 学习目的声明 / Learning Purpose
 
-本仓库所有代码、文档、仿真结果均为个人学习产出，
-仅供个人学习、研究使用。虽有 MIT 协议授权，
-但强烈建议不要直接用于生产环境、商业产品或安全关键系统。
+本仓库所有代码、文档、仿真结果均为个人学习产出。
+MIT 协议授权仅限于学习、研究用途。任何商业用途（包括但不限于
+嵌入商业产品、用于生产环境、用于安全关键系统）需另行获得
+作者明确的书面许可。
 
 All code, documentation, and simulation results in this repository
-are personal learning output for educational and research purposes only.
-Use in production, commercial products, or safety-critical systems
-is strongly discouraged.
+are personal learning output. The MIT license granted herein is
+limited to educational and research purposes. Any commercial use
+(including but not limited to embedding in commercial products,
+use in production environments, or use in safety-critical systems)
+requires separate explicit written permission from the author.
 
 ## 硬件安全声明 / Hardware Safety
 
