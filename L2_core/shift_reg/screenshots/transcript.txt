@@ -1,9 +1,3 @@
-Reading pref.tcl
-
-# 2020.4
-
-# vsim -c tb_shift_reg -do "run -all; quit" 
-# ** Note: (vsim-3812) Design is being optimized...
 # run -all
 # --- Load ---
 # [PASS]                       LOAD: 0xA6: q=10100110

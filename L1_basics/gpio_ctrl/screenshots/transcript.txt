@@ -1,9 +1,3 @@
-Reading pref.tcl
-
-# 2020.4
-
-# vsim -c tb_gpio_ctrl -do "run -all; quit" 
-# ** Note: (vsim-3812) Design is being optimized...
 # run -all
 # === Scene 1: Press key[0] ===
 # [PASS] LED0 on (led_out=0001)

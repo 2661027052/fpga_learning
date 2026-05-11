@@ -1,9 +1,3 @@
-Reading pref.tcl
-
-# 2020.4
-
-# vsim -c tb_key_debounce -do "run -all; quit" 
-# ** Note: (vsim-3812) Design is being optimized...
 # run -all
 # === Scene 1: Clean press (no bouncing) ===
 # [PASS] Scene 1: key_pressed=1 at cycle 22 after press

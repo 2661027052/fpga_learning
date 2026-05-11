@@ -1,9 +1,3 @@
-Reading pref.tcl
-
-# 2020.4
-
-# vsim -c tb_alu -do "run -all; quit" 
-# ** Note: (vsim-3812) Design is being optimized...
 # run -all
 # [PASS]                        ADD 20+30: result= 50, zero=0, carry=0
 # [PASS]               ADD 200+100(carry): result= 44, zero=0, carry=1
