@@ -32,3 +32,5 @@
 # ** Note: $finish    : tb_alu.v(91)
 #    Time: 27 ns  Iteration: 0  Instance: /tb_alu
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

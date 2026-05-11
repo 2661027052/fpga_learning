@@ -12,3 +12,5 @@
 # ** Note: $finish    : tb_key_debounce.v(95)
 #    Time: 2291 ns  Iteration: 0  Instance: /tb_key_debounce
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

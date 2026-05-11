@@ -14,3 +14,5 @@
 # ** Note: $finish    : tb_counter.v(86)
 #    Time: 386 ns  Iteration: 0  Instance: /tb_counter
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

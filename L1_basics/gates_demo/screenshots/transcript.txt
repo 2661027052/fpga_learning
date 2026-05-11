@@ -13,3 +13,5 @@
 # ** Note: $finish    : tb_gates_demo.v(78)
 #    Time: 94 ns  Iteration: 0  Instance: /tb_gates_demo
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

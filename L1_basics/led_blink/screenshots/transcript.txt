@@ -29,3 +29,5 @@
 # ** Note: $finish    : tb_led_blink.v(28)
 #    Time: 711 ns  Iteration: 0  Instance: /tb_led_blink
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

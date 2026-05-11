@@ -11,3 +11,5 @@
 # ** Note: $finish    : tb_gpio_ctrl.v(60)
 #    Time: 3291 ns  Iteration: 0  Instance: /tb_gpio_ctrl
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim

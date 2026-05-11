@@ -22,3 +22,5 @@
 # ** Note: $finish    : tb_shift_reg.v(100)
 #    Time: 206 ns  Iteration: 0  Instance: /tb_shift_reg
 # Errors: 0, Warnings: 0
+
+Simulated with ModelSim
