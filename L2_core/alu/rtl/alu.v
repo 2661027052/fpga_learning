@@ -7,12 +7,11 @@ module alu #(
     input  wire [WIDTH-1:0] a,        // 操作数A
     input  wire [WIDTH-1:0] b,        // 操作数B
     input  wire [3:0]       op,       // 操作码（9种运算）
-    output reg  [WIDTH-1:0] result,   // 运算结果
+    output wire [WIDTH-1:0] result,   // 运算结果
     output wire             zero,     // 零标志：result == 0
     output wire             carry     // 进位标志：ADD/SUB时产生进位/借位
 );
 
-    // 操作码宏定义（提高可读性，避免魔术数字）
     localparam OP_ADD = 4'b0000;  // 加法
     localparam OP_SUB = 4'b0001;  // 减法
     localparam OP_MUL = 4'b0010;  // 乘法
@@ -30,19 +29,19 @@ module alu #(
         case (op)
             OP_ADD: extended = {1'b0, a} + {1'b0, b};
             OP_SUB: extended = {1'b0, a} - {1'b0, b};
-            OP_MUL: extended = a * b;                       // 乘法只取低8位
+            OP_MUL: extended = a * b;
             OP_AND: extended = {1'b0, a & b};
             OP_OR:  extended = {1'b0, a | b};
             OP_XOR: extended = {1'b0, a ^ b};
             OP_SLT: extended = ($signed(a) < $signed(b)) ? 9'd1 : 9'd0;
-            OP_SRL: extended = {1'b0, a >> b[2:0]};        // 移位位数由b低3位控制
+            OP_SRL: extended = {1'b0, a >> b[2:0]};
             OP_SLL: extended = {1'b0, a << b[2:0]};
             default: extended = 9'd0;
         endcase
     end
 
     assign result = extended[WIDTH-1:0];
-    assign carry  = extended[WIDTH];   // ADD/SUB时的进位/借位
-    assign zero   = (result == 8'd0);   // 结果为零时置1
+    assign carry  = extended[WIDTH];
+    assign zero   = (result == 8'd0);
 
 endmodule

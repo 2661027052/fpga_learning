@@ -1,0 +1,30 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c tb_shift_reg -do "run -all; quit" 
+# ** Note: (vsim-3812) Design is being optimized...
+# run -all
+# --- Load ---
+# [PASS]                       LOAD: 0xA6: q=10100110
+# --- Shift Left ---
+# [PASS]                       SHL[1]: +1: q=01001101
+# [PASS]                       SHL[2]: +1: q=10011011
+# [PASS]                       SHL[3]: +0: q=00110110
+# [PASS] SO_LEFT
+# --- Shift Right ---
+# [PASS]                           RELOAD: q=10100110
+# [PASS]                       SHR[1]: +1: q=11010011
+# [PASS]                       SHR[2]: +1: q=11101001
+# [PASS]                       SHR[3]: +0: q=01110100
+# [PASS] SO_RIGHT
+# --- Hold ---
+# [PASS] HOLD: unchanged
+# --- Reset ---
+# [PASS] RST: zero
+# ======================================
+# Shift Reg:          12 passed,           0 failed
+# ======================================
+# ** Note: $finish    : tb_shift_reg.v(100)
+#    Time: 206 ns  Iteration: 0  Instance: /tb_shift_reg
+# Errors: 0, Warnings: 0

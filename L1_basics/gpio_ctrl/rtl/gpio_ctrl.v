@@ -17,7 +17,9 @@
 //
 // ============================================================================
 
-module gpio_ctrl (
+module gpio_ctrl #(
+    parameter DEBOUNCE_CNT = 10   // 消抖时间，仿真时可覆写为小值
+) (
     input  wire       clk      ,  // 系统时钟，50MHz
     input  wire       rst_n    ,  // 全局复位，低电平有效
     input  wire [3:0] key_in   ,  // 4个按键输入（低电平表示按下）
@@ -37,7 +39,7 @@ module gpio_ctrl (
     generate
         for (i = 0; i < 4; i = i + 1) begin : gen_key_debounce
             key_debounce #(
-                .DEBOUNCE_CNT(1_000_000)  // 20ms消抖 @ 50MHz
+                .DEBOUNCE_CNT(DEBOUNCE_CNT)  // 20ms消抖 @ 50MHz
             ) u_key_debounce (
                 .clk        (clk            ),
                 .rst_n      (rst_n          ),

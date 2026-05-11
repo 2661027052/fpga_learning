@@ -1,0 +1,22 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c tb_counter -do "run -all; quit" 
+# ** Note: (vsim-3812) Design is being optimized...
+# run -all
+# --- UP 1->15 ---
+# [PASS] UP overflow: 15->0
+# --- Load 10 ---
+# [PASS] Load 10
+# --- DOWN ---
+# [PASS] DOWN underflow
+# [PASS] EN_OFF hold
+# [PASS] AT_MAX
+# [PASS] AT_ZERO
+# ======================================
+# Counter:          22 passed,           0 failed
+# ======================================
+# ** Note: $finish    : tb_counter.v(86)
+#    Time: 386 ns  Iteration: 0  Instance: /tb_counter
+# Errors: 0, Warnings: 0

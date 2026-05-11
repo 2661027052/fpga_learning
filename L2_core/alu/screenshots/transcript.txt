@@ -1,0 +1,40 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c tb_alu -do "run -all; quit" 
+# ** Note: (vsim-3812) Design is being optimized...
+# run -all
+# [PASS]                        ADD 20+30: result= 50, zero=0, carry=0
+# [PASS]               ADD 200+100(carry): result= 44, zero=0, carry=1
+# [PASS]                    ADD 0+0(zero): result=  0, zero=1, carry=0
+# [PASS]                        ADD 255+1: result=  0, zero=1, carry=1
+# [PASS]                        SUB 50-30: result= 20, zero=0, carry=0
+# [PASS]                SUB 30-50(borrow): result=236, zero=0, carry=1
+# [PASS]                  SUB 10-10(zero): result=  0, zero=1, carry=0
+# [PASS]                         MUL 10*5: result= 50, zero=0, carry=0
+# [PASS]                        MUL 16*16: result=  0, zero=1, carry=1
+# [PASS]                        MUL 0*100: result=  0, zero=1, carry=0
+# [PASS]                          MUL 3*7: result= 21, zero=0, carry=0
+# [PASS]                        AND F0&AA: result=160, zero=0, carry=0
+# [PASS]                        AND FF&00: result=  0, zero=1, carry=0
+# [PASS]                         OR F0|0F: result=255, zero=0, carry=0
+# [PASS]                         OR 00|00: result=  0, zero=1, carry=0
+# [PASS]                        XOR F0^AA: result= 90, zero=0, carry=0
+# [PASS]                       XOR same=0: result=  0, zero=1, carry=0
+# [PASS]                        SLT 10<20: result=  1, zero=0, carry=0
+# [PASS]                        SLT 30<10: result=  0, zero=1, carry=0
+# [PASS]                          SLT 5<5: result=  0, zero=1, carry=0
+# [PASS]                         SLT -1<1: result=  1, zero=0, carry=0
+# [PASS]                        SRL 80>>1: result= 64, zero=0, carry=0
+# [PASS]                        SRL 80>>7: result=  1, zero=0, carry=0
+# [PASS]                        SRL 01>>1: result=  0, zero=1, carry=0
+# [PASS]                        SLL 01<<1: result=  2, zero=0, carry=0
+# [PASS]                        SLL 01<<7: result=128, zero=0, carry=0
+# [PASS]                        SLL 80<<1: result=  0, zero=1, carry=0
+# ======================================
+# ALU:          27 passed,           0 failed (total          27)
+# ======================================
+# ** Note: $finish    : tb_alu.v(91)
+#    Time: 27 ns  Iteration: 0  Instance: /tb_alu
+# Errors: 0, Warnings: 0

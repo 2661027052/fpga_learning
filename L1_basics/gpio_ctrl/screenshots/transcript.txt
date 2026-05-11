@@ -1,0 +1,19 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c tb_gpio_ctrl -do "run -all; quit" 
+# ** Note: (vsim-3812) Design is being optimized...
+# run -all
+# === Scene 1: Press key[0] ===
+# [PASS] LED0 on (led_out=0001)
+# === Scene 2: Press key[0] again (toggle) ===
+# [PASS] LED0 off (toggle works, led_out=0000)
+# === Scene 3: Press key[1]+key[2] ===
+# [PASS] LED1+LED2 on (led_out=0110)
+# ======================================
+# gpio_ctrl:           3 passed,           0 failed
+# ======================================
+# ** Note: $finish    : tb_gpio_ctrl.v(60)
+#    Time: 3291 ns  Iteration: 0  Instance: /tb_gpio_ctrl
+# Errors: 0, Warnings: 0

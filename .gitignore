@@ -1,0 +1,17 @@
+# ModelSim artifacts
+work/
+work2/
+work3/
+final/
+f2/
+__sim/
+*.wlf
+*.vcd
+transcript
+modelsim.ini
+vsim.wlf
+*.qdb
+*.qpg
+*.qtl
+_info
+vlog.opt

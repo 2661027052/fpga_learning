@@ -1,0 +1,37 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c tb_led_blink -do "run -all; quit" 
+# ** Note: (vsim-3812) Design is being optimized...
+# run -all
+# --- LED Blink (DIV_FREQ=5, LED toggles every 5 cycles) ---
+#   Cycle  0: LED=0
+#   Cycle  1: LED=0
+#   Cycle  2: LED=0
+#   Cycle  3: LED=1
+#   Cycle  4: LED=1
+#   Cycle  5: LED=1
+#   Cycle  6: LED=1
+#   Cycle  7: LED=1
+#   Cycle  8: LED=0
+#   Cycle  9: LED=0
+#   Cycle 10: LED=0
+#   Cycle 11: LED=0
+#   Cycle 12: LED=0
+#   Cycle 13: LED=1
+#   Cycle 14: LED=1
+#   Cycle 15: LED=1
+#   Cycle 16: LED=1
+#   Cycle 17: LED=1
+#   Cycle 18: LED=0
+#   Cycle 19: LED=0
+#   Cycle 20: LED=0
+#   Cycle 21: LED=0
+#   Cycle 22: LED=0
+#   Cycle 23: LED=1
+#   Cycle 24: LED=1
+# --- PASS: LED toggles correctly ---
+# ** Note: $finish    : tb_led_blink.v(28)
+#    Time: 711 ns  Iteration: 0  Instance: /tb_led_blink
+# Errors: 0, Warnings: 0
