@@ -21,7 +21,10 @@
 - 仿真脚本（`.do`）必须以 `cd [file dirname [info script]]` 开头
 - 仿真截图存放于 `screenshots/`，格式 PNG
 - 截图不得暴露本地绝对路径、用户名等个人信息
-- Transcript 清理掉 ModelSim 版权横幅后保存为 `transcript.txt`，末尾加 `Simulated with ModelSim`
+- Transcript 处理规则：
+  - 删除开头的 ModelSim 版权横幅和启动日��
+  - 保留 `# run -all` 开始的仿真输出，以及 `$display`/`$error` 等用户打印内容
+  - **文件末尾必须空一行后追加** `Simulated with ModelSim`
 
 ## Git 规则
 
