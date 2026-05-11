@@ -1,4 +1,5 @@
 # key_debounce 仿真脚本 — 在 ModelSim 中执行: do run.do
+cd [file dirname [info script]]
 vlib work
 vmap work work
 vlog ../rtl/key_debounce.v tb_key_debounce.v

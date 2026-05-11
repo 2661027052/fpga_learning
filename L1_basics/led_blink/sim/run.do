@@ -1,4 +1,5 @@
 # led_blink 仿真脚本 — 在 ModelSim 中执行: do run.do
+cd [file dirname [info script]]
 vlib work
 vmap work work
 vlog ../rtl/led_blink.v tb_led_blink.v

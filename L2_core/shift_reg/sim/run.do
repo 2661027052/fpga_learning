@@ -1,4 +1,5 @@
 # Shift Register 仿真脚本 — 在 ModelSim 中执行: do run.do
+cd [file dirname [info script]]
 vlib work
 vmap work work
 vlog ../rtl/shift_reg.v tb_shift_reg.v

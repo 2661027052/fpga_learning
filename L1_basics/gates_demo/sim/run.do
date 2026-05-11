@@ -1,4 +1,5 @@
 # gates_demo 仿真脚本 — 在 ModelSim 中执行: do run.do
+cd [file dirname [info script]]
 vlib work
 vmap work work
 vlog ../rtl/gates_demo.v tb_gates_demo.v
