@@ -1,5 +1,6 @@
 # ModelSim artifacts
 work/
+work1/
 work2/
 work3/
 final/
@@ -15,6 +16,8 @@ vsim.wlf
 *.qtl
 _info
 vlog.opt
+*.cr.mti
+*.mpf
 
 # Xilinx IP core generated files (do not distribute)
 *.xci
