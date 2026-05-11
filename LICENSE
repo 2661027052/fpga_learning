@@ -2,6 +2,15 @@ MIT License
 
 Copyright (c) 2026-present 2661027052
 
+在本许可文件中，"Software" 指本仓库全部内容，包括但不限于
+Verilog/SystemVerilog 硬件描述语言源码（.v/.sv）、testbench、
+仿真脚本（.do）、Markdown 文档、仿真输出数据及截图。
+
+In this license, "Software" refers to all content in this repository,
+including but not limited to Verilog/SystemVerilog source code (.v/.sv),
+testbenches, simulation scripts (.do), Markdown documentation,
+simulation output data, and screenshots.
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -29,6 +38,11 @@ SOFTWARE.
 >
 > The additional terms below are integral to this license.
 > In case of conflict with the MIT text above, the additional terms prevail.
+>
+> 本许可文件中英文对照。如中英版本存在歧义或冲突，以中文版本为准。
+>
+> This license is bilingual. In case of discrepancy or conflict
+> between the Chinese and English versions, the Chinese version prevails.
 
 ## 一、许可范围澄清 / 1. Scope Clarification
 
@@ -48,15 +62,14 @@ SOFTWARE.
 - 学术论文、技术博客中的代码引用（须保留版权声明）
 - 开源社区的技术讨论与代码审查
 
-## 2. Scope Clarification
+## Scope Clarification (English)
 
 The term "without restriction" in the MIT text above is standard
 boilerplate language. Its scope is limited by these Additional Terms.
 The rights granted hereunder are limited to educational, research,
 and personal non-commercial purposes.
 
-**The following non-commercial uses are explicitly permitted**
-(no additional permission required):
+**Non-commercial uses explicitly permitted** (no additional permission):
 
 - Personal study, practice, and interview preparation
 - Non-profit teaching in academic or training settings
