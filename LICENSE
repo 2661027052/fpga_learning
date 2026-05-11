@@ -1,4 +1,17 @@
-MIT License
+Custom License (based on MIT) — 基于 MIT 的自定义许可协议
+
+> ⚠️ **重要提示**：本许可不是开源许可协议（not an open source license）。
+> 本软件采用 **"源码可用"(Source Available)** 模式，严格限于
+> 个人非商业学习与研究使用。任何超出此范围的商业使用须另行获得
+> 作者明确的书面许可。GitHub 用户仅可依据 GitHub 服务条款进行
+> 浏览和 fork，fork 后的一切使用行为仍受本许可约束。
+>
+> **IMPORTANT**: This is NOT an open source license. This software is
+> **Source Available** — strictly limited to personal non-commercial
+> learning and research. Any commercial use beyond this scope requires
+> separate written permission from the author. GitHub users may only
+> view and fork under GitHub's Terms of Service; all use beyond forking
+> is governed by this license.
 
 Copyright (c) 2026-present 2661027052
 
@@ -129,10 +142,18 @@ The author assumes no liability for any damages.
 
 ## 六、第三方知识产权 / 6. Third-Party IP
 
-本仓库中提及或调用的 Xilinx/AMD IP 核、原语、库组件，
-其知识产权归其各自所有者所有。本仓库不包含也不分发
-任何第三方 IP 核的源代码、网表或配置文件。
+尽管本许可文件开头对"Software"的定义涵盖本仓库全部内容，
+第三方 IP 组件（包括但不限于 Xilinx/AMD IP 核、原语、库组件）
+不适用本许可授权。本许可中的任何内容不构成对第三方知识产权
+权利的放弃、让与或默示许可。本仓库中提及或调用的 Xilinx/AMD
+IP 核、原语、库组件，其知识产权归其各自所有者所有。本仓库
+不包含也不分发任何第三方 IP 核的源代码、网表或配置文件。
 
+Notwithstanding the definition of "Software" at the beginning of this
+license, third-party IP components (including but not limited to
+Xilinx/AMD IP cores, primitives, and library components) are NOT
+subject to the grants herein. Nothing in this license constitutes a
+waiver, assignment, or implied license of any third-party IP rights.
 Xilinx/AMD IP cores, primitives, and library components referenced
 herein are the intellectual property of their respective owners.
 This repository does NOT contain or distribute any third-party
@@ -157,11 +178,63 @@ by a court of competent jurisdiction, that provision shall be enforced
 to the maximum extent permitted by law, and the remaining provisions
 shall remain in full force and effect.
 
-## 九、适用法律与管辖 / 9. Governing Law & Jurisdiction
+## 九、适用法律与争议解决 / 9. Governing Law & Dispute Resolution
 
-本许可文件适用中华人民共和国法律。因本许可文件产生的争议，
-双方应先行协商；协商不成的，由作者所在地有管辖权的人民法院管辖。
+本许可文件适用中华人民共和国法律。
+
+因本许可文件产生的任何争议，双方应首先通过友好协商解决，
+协商期限为六十（60）日。协商不成的，任一方可将争议提交
+上海国际经济贸易仲裁委员会（SHIAC）按其届时有效的仲裁规则
+进行仲裁，仲裁地为上海，仲裁语言为中文。作者有权酌情同意
+将涉外国当事人的争议提交新加坡国际仲裁中心（SIAC）按其
+届时有效的仲裁规则仲裁，仲裁地为新加坡，仲裁语言为英文。
+仲裁裁决是终局的，对双方均有约束力。
+
+如争议事项依法不属于可仲裁范围，或仲裁裁决被有管辖权的法院
+撤销或不予执行的，由作者住所地有管辖权的人民法院管辖。
 
 This license is governed by the laws of the People's Republic of China.
-Disputes shall first be resolved through negotiation; failing that,
-the competent court at the author's domicile shall have jurisdiction.
+
+Any dispute arising from or in connection with this license shall first
+be resolved through amicable negotiation within sixty (60) days.
+Failing that, either party may submit the dispute to the Shanghai
+International Economic and Trade Arbitration Commission (SHIAC) for
+arbitration in accordance with its then-effective rules, with the seat
+in Shanghai and the language in Chinese. The author may, at their sole
+discretion, agree to submit disputes involving foreign parties to the
+Singapore International Arbitration Centre (SIAC) in accordance with
+its then-effective rules, with the seat in Singapore and the language
+in English. The arbitral award is final and binding on both parties.
+
+If the subject matter of the dispute is not arbitrable by applicable
+law, or if the arbitral award is set aside or refused enforcement by a
+competent court, the competent court at the author's domicile shall
+have jurisdiction.
+
+## 十、违约救济与许可终止 / 10. Breach Remedies & License Termination
+
+任何超出本许可授权范围的使用行为（包括但不限于第一条所述的
+商业使用、生产环境部署、安全关键系统使用）将导致本许可自动
+终止，无需作者另行通知。许可终止后，使用方应立即停止使用、
+复制、修改、分发本软件的全部或部分内容，并销毁其所持有的
+所有副本（但适用法律要求保留的除外）。
+
+许可终止不影响作者在本许可终止前已产生的损害赔偿请求权或
+其他救济权利。作者保留依据《中华人民共和国著作权法》及其他
+适用法律追究侵权责任、主张损害赔偿、申请行为保全和证据保全
+的权利。
+
+Any use beyond the scope of this license (including but not limited to
+commercial use, production deployment, or use in safety-critical systems
+as described in Section 1) shall result in automatic termination of this
+license without prior notice from the author. Upon termination, the
+licensee shall immediately cease all use, reproduction, modification,
+and distribution of the Software (in whole or in part) and destroy all
+copies in their possession (except as required by applicable law).
+
+Termination does not affect the author's right to claim damages or seek
+other remedies accrued prior to termination. The author reserves the
+right to pursue infringement claims, damages, injunctive relief
+(including interim measures for behavior preservation and evidence
+preservation), and any other remedies available under the Copyright Law
+of the People's Republic of China and other applicable laws.
