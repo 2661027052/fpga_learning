@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 按键消抖 testbench（修正版 v2 — 无抖动，精确时序验证）
 `timescale 1ns / 1ps
 

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // Counter testbench v3
 `timescale 1ns / 1ps
 

@@ -1,5 +1,14 @@
 # FPGA 学习项目 (FPGA Learning Portfolio)
 
+> ⚠️ **免责声明**：本仓库所有代码仅供个人学习、研究使用，**不保证适用于任何生产环境**。
+> 使用者自行承担全部风险，作者不对因使用本代码造成的任何损失负责。
+> 详见 [LICENSE](LICENSE)。
+>
+> **Disclaimer**: All code is for personal learning/research only. No fitness for production.
+> Use at your own risk. See [LICENSE](LICENSE).
+>
+> ---
+>
 > 从零到就业的 FPGA 学习轨迹 —— 每个模块含可综合 RTL、仿真 testbench、英文文档
 
 ## 项目结构 (Project Structure)
@@ -48,3 +57,11 @@ fpga_learning/
 ---
 
 *开始于 2026-05-10 · 每天更新*
+
+## 商标声明 (Trademark Notice)
+
+本仓库中提及的 Xilinx、ZYNQ、Vivado 为赛灵思（现 AMD）商标；ModelSim 为西门子 EDA 商标。
+所有商标归其各自所有者所有。本仓库与上述公司无任何关联或背书关系。
+
+All trademarks mentioned are property of their respective owners. This repository is not
+affiliated with or endorsed by any of the companies mentioned.
