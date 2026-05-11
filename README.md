@@ -1,11 +1,14 @@
 # FPGA 学习项目 (FPGA Learning Portfolio)
 
-> ⚠️ **免责声明**：本仓库所有代码仅供个人学习、研究使用，**不保证适用于任何生产环境**。
-> 使用者自行承担全部风险，作者不对因使用本代码造成的任何损失负责。
+> ⚠️ **许可声明**：本仓库代码采用**源码可用 (Source Available)** 模式，
+> **仅供个人非商业学习与研究使用**。任何商业用途（包括嵌入产品、生产环境部署）
+> 须另行获得作者书面许可。代码不保证适用于任何生产环境，使用者自行承担全部风险。
 > 详见 [LICENSE](LICENSE)。
 >
-> **Disclaimer**: All code is for personal learning/research only. No fitness for production.
-> Use at your own risk. See [LICENSE](LICENSE).
+> **License Notice**: Source Available — **non-commercial learning/research only**.
+> Any commercial use (including embedding in products, production deployment)
+> requires separate written permission. No warranty. Use at your own risk.
+> See [LICENSE](LICENSE).
 >
 > ---
 >

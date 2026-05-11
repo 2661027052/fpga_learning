@@ -3,15 +3,19 @@ Custom License (based on MIT) — 基于 MIT 的自定义许可协议
 > ⚠️ **重要提示**：本许可不是开源许可协议（not an open source license）。
 > 本软件采用 **"源码可用"(Source Available)** 模式，严格限于
 > 个人非商业学习与研究使用。任何超出此范围的商业使用须另行获得
-> 作者明确的书面许可。GitHub 用户仅可依据 GitHub 服务条款进行
-> 浏览和 fork，fork 后的一切使用行为仍受本许可约束。
+> 作者明确的书面许可。GitHub 用户可依据 GitHub 服务条款 fork
+> 本仓库，fork 行为本身不受本许可限制；但任何超出单纯存储目的
+> 的使用（包括修改、运行、分发、集成到其他项目）均须遵守
+> 本许可的全部条款。
 >
 > **IMPORTANT**: This is NOT an open source license. This software is
 > **Source Available** — strictly limited to personal non-commercial
 > learning and research. Any commercial use beyond this scope requires
-> separate written permission from the author. GitHub users may only
-> view and fork under GitHub's Terms of Service; all use beyond forking
-> is governed by this license.
+> separate written permission from the author. Forking this repository
+> as permitted by GitHub's Terms of Service is not restricted by this
+> license; however, any use beyond mere storage (including modification,
+> execution, distribution, or integration into other projects) must
+> comply with all terms of this license.
 
 Copyright (c) 2026-present 2661027052
 
@@ -185,9 +189,10 @@ shall remain in full force and effect.
 因本许可文件产生的任何争议，双方应首先通过友好协商解决，
 协商期限为六十（60）日。协商不成的，任一方可将争议提交
 上海国际经济贸易仲裁委员会（SHIAC）按其届时有效的仲裁规则
-进行仲裁，仲裁地为上海，仲裁语言为中文。作者有权酌情同意
-将涉外国当事人的争议提交新加坡国际仲裁中心（SIAC）按其
-届时有效的仲裁规则仲裁，仲裁地为新加坡，仲裁语言为英文。
+进行仲裁，仲裁地为上海，仲裁语言为中文。
+双方当事人均为外国实体，或经双方书面同意的，可将争议提交
+新加坡国际仲裁中心（SIAC）按其届时有效的仲裁规则仲裁，
+仲裁地为新加坡，仲裁语言为英文。
 仲裁裁决是终局的，对双方均有约束力。
 
 如争议事项依法不属于可仲裁范围，或仲裁裁决被有管辖权的法院
@@ -200,11 +205,12 @@ be resolved through amicable negotiation within sixty (60) days.
 Failing that, either party may submit the dispute to the Shanghai
 International Economic and Trade Arbitration Commission (SHIAC) for
 arbitration in accordance with its then-effective rules, with the seat
-in Shanghai and the language in Chinese. The author may, at their sole
-discretion, agree to submit disputes involving foreign parties to the
-Singapore International Arbitration Centre (SIAC) in accordance with
-its then-effective rules, with the seat in Singapore and the language
-in English. The arbitral award is final and binding on both parties.
+in Shanghai and the language in Chinese.
+If both parties are foreign entities, or by mutual written agreement,
+the dispute may be submitted to the Singapore International Arbitration
+Centre (SIAC) in accordance with its then-effective rules, with the
+seat in Singapore and the language in English.
+The arbitral award is final and binding on both parties.
 
 If the subject matter of the dispute is not arbitrable by applicable
 law, or if the arbitral award is set aside or refused enforcement by a
@@ -215,9 +221,11 @@ have jurisdiction.
 
 任何超出本许可授权范围的使用行为（包括但不限于第一条所述的
 商业使用、生产环境部署、安全关键系统使用）将导致本许可自动
-终止，无需作者另行通知。许可终止后，使用方应立即停止使用、
-复制、修改、分发本软件的全部或部分内容，并销毁其所持有的
-所有副本（但适用法律要求保留的除外）。
+终止，无需作者另行通知。但作者有权选择放弃自动终止，改为向
+使用方发出书面通知并给予三十（30）日补救期；逾期未补救的，
+本许可自动终止。许可终止后，使用方应立即停止使用、复制、
+修改、分发本软件的全部或部分内容，并销毁其所持有的所有副本
+（但适用法律要求保留的除外）。
 
 许可终止不影响作者在本许可终止前已产生的损害赔偿请求权或
 其他救济权利。作者保留依据《中华人民共和国著作权法》及其他
@@ -227,10 +235,14 @@ have jurisdiction.
 Any use beyond the scope of this license (including but not limited to
 commercial use, production deployment, or use in safety-critical systems
 as described in Section 1) shall result in automatic termination of this
-license without prior notice from the author. Upon termination, the
-licensee shall immediately cease all use, reproduction, modification,
-and distribution of the Software (in whole or in part) and destroy all
-copies in their possession (except as required by applicable law).
+license without prior notice from the author. However, the author may
+elect to waive automatic termination and instead provide the licensee
+with written notice and a thirty (30) day cure period; if the breach
+is not cured within such period, this license shall terminate
+automatically. Upon termination, the licensee shall immediately cease
+all use, reproduction, modification, and distribution of the Software
+(in whole or in part) and destroy all copies in their possession
+(except as required by applicable law).
 
 Termination does not affect the author's right to claim damages or seek
 other remedies accrued prior to termination. The author reserves the
