@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 可配置N位计数器 — 时序逻辑电路
 // 支持：递增/递减、计数使能、加载初值、溢出标志
 

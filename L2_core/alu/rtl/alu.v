@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 8-bit ALU — 组合逻辑电路，支持9种运算
 // L2 核心技能：组合逻辑电路设计
 

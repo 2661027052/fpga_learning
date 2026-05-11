@@ -1,0 +1,15 @@
+E:/fpga_projects/L1_basics/gates_demo/sim/tb_gates_demo.v {1 {vlog -work work1 -vopt -stats=none E:/fpga_projects/L1_basics/gates_demo/sim/tb_gates_demo.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_gates_demo
+
+Top level modules:
+	tb_gates_demo
+
+} {} {}} E:/fpga_projects/L1_basics/gates_demo/rtl/gates_demo.v {1 {vlog -work work1 -vopt -stats=none E:/fpga_projects/L1_basics/gates_demo/rtl/gates_demo.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module gates_demo
+
+Top level modules:
+	gates_demo
+
+} {} {}}

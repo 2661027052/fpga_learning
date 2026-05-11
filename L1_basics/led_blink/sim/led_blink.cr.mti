@@ -1,0 +1,15 @@
+E:/fpga_projects/L1_basics/led_blink/sim/tb_led_blink.v {1 {vlog -work work1 -vopt -stats=none E:/fpga_projects/L1_basics/led_blink/sim/tb_led_blink.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_led_blink
+
+Top level modules:
+	tb_led_blink
+
+} {} {}} E:/fpga_projects/L1_basics/led_blink/rtl/led_blink.v {1 {vlog -work work1 -vopt -stats=none E:/fpga_projects/L1_basics/led_blink/rtl/led_blink.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module led_blink
+
+Top level modules:
+	led_blink
+
+} {} {}}

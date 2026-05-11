@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 偶数分频器 — 计数器实现50%占空比时钟分频
 // 输出频率 = 输入频率 / (2 * DIV_FACTOR)
 
