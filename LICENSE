@@ -5,7 +5,7 @@ Custom License (based on MIT) — 基于 MIT 的自定义许可协议
 > 个人非商业学习与研究使用。任何超出此范围的商业使用须另行获得
 > 作者明确的书面许可。GitHub 用户可依据 GitHub 服务条款 fork
 > 本仓库，fork 行为本身不受本许可限制；但任何超出单纯存储目的
-> 的使用（包括修改、运行、分发、集成到其他项目）均须遵守
+> 的使用，例如修改、运行、分发、集成到其他项目，均须遵守
 > 本许可的全部条款。
 >
 > **IMPORTANT**: This is NOT an open source license. This software is
@@ -13,8 +13,8 @@ Custom License (based on MIT) — 基于 MIT 的自定义许可协议
 > learning and research. Any commercial use beyond this scope requires
 > separate written permission from the author. Forking this repository
 > as permitted by GitHub's Terms of Service is not restricted by this
-> license; however, any use beyond mere storage (including modification,
-> execution, distribution, or integration into other projects) must
+> license; however, any use beyond mere storage — such as modification,
+> execution, distribution, or integration into other projects — must
 > comply with all terms of this license.
 
 Copyright (c) 2026-present 2661027052
@@ -146,17 +146,19 @@ The author assumes no liability for any damages.
 
 ## 六、第三方知识产权 / 6. Third-Party IP
 
-尽管本许可文件开头对"Software"的定义涵盖本仓库全部内容，
-第三方 IP 组件（包括但不限于 Xilinx/AMD IP 核、原语、库组件）
+本许可中 "Software" 的定义仅为描述仓库内容之目的，
+不表示对第三方 IP 组件授予任何权利。第三方 IP 组件
+（包括但不限于 Xilinx/AMD IP 核、原语、库组件）
 不适用本许可授权。本许可中的任何内容不构成对第三方知识产权
 权利的放弃、让与或默示许可。本仓库中提及或调用的 Xilinx/AMD
 IP 核、原语、库组件，其知识产权归其各自所有者所有。本仓库
 不包含也不分发任何第三方 IP 核的源代码、网表或配置文件。
 
-Notwithstanding the definition of "Software" at the beginning of this
-license, third-party IP components (including but not limited to
-Xilinx/AMD IP cores, primitives, and library components) are NOT
-subject to the grants herein. Nothing in this license constitutes a
+The definition of "Software" in this license is solely for the purpose
+of describing the repository content and does not confer any rights to
+third-party IP components. Third-party IP components (including but not
+limited to Xilinx/AMD IP cores, primitives, and library components) are
+NOT subject to the grants herein. Nothing in this license constitutes a
 waiver, assignment, or implied license of any third-party IP rights.
 Xilinx/AMD IP cores, primitives, and library components referenced
 herein are the intellectual property of their respective owners.
