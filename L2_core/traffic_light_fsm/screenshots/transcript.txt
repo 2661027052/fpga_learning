@@ -1,0 +1,23 @@
+# run -all
+# [TB] Test 1: Reset ??? S_GREEN
+# [PASS] T1: S_GREEN state OK
+# [TB] Test 2: S_GREEN ??? S_YELLOW after 5 cycles
+# [PASS] T2: S_GREEN ??? S_YELLOW transition OK
+# [TB] Test 3: S_YELLOW ??? E_GREEN
+# [PASS] T3: E_GREEN state OK
+# [TB] Test 4: E_GREEN ??? E_YELLOW
+# [PASS] T4: E_YELLOW state OK
+# [TB] Test 5: E_YELLOW ??? S_GREEN (full cycle)
+# [PASS] T5: Full cycle back to S_GREEN OK
+# [TB] Test 6: Mutual exclusion check
+# [PASS] T6: No simultaneous green detected
+# [TB] Test 7: Reset recovery
+# [PASS] T7: Reset recovery OK
+# ========================================
+# [RESULT] ALL TESTS PASSED
+# ========================================
+# ** Note: $finish    : traffic_light_fsm_tb.v(126)
+#    Time: 1050 ns  Iteration: 1  Instance: /traffic_light_fsm_tb
+# Errors: 0, Warnings: 0
+
+Simulated with ModelSim

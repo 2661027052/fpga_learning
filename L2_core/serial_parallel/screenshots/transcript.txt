@@ -1,0 +1,17 @@
+# run -all
+# [TB] Test 1: SIPO receive 0xA5
+# [PASS] T1: SIPO received 0xA5 OK
+# [TB] Test 2: SIPO receive 0x3C
+# [PASS] T2: SIPO received 0x3C OK
+# [TB] Test 3: PISO send 0x55
+# [PASS] T3: PISO sent 0x55 OK
+# [TB] Test 4: Loopback SIPO ??? PISO
+# [PASS] T4: Loopback 0xA5 OK
+# ========================================
+# [RESULT] ALL TESTS PASSED
+# ========================================
+# ** Note: $finish    : serial_parallel_tb.v(173)
+#    Time: 1010 ns  Iteration: 1  Instance: /serial_parallel_tb
+# Errors: 0, Warnings: 0
+
+Simulated with ModelSim

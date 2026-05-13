@@ -1,0 +1,23 @@
+# run -all
+# [TB] Test 1: Rising edge detection
+# [PASS] T1: Rising edge detected OK
+# [TB] Test 2: pos_edge pulse width = 1 cycle
+# [PASS] T2: pos_edge is single-cycle pulse OK
+# [TB] Test 3: Falling edge detection
+# [PASS] T3: Falling edge detected OK
+# [TB] Test 4: neg_edge pulse width = 1 cycle
+# [PASS] T4: neg_edge is single-cycle pulse OK
+# [TB] Test 5: Both-edge detection
+# [PASS] T5: Both edges detected OK
+# [TB] Test 6: No false trigger in steady state
+# [PASS] T6: No false edge OK
+# [TB] Test 7: Reset clears all outputs
+# [PASS] T7: Reset clear OK
+# ========================================
+# [RESULT] ALL TESTS PASSED
+# ========================================
+# ** Note: $finish    : edge_detect_tb.v(126)
+#    Time: 550 ns  Iteration: 1  Instance: /edge_detect_tb
+# Errors: 0, Warnings: 0
+
+Simulated with ModelSim

@@ -34,3 +34,6 @@ vlog.opt
 *.ip_user_files/
 *.sim/
 *.sdk/
+
+# Icarus Verilog artifacts
+*.vvp
