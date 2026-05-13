@@ -1,17 +1,33 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // ALU testbench — 覆盖全部9种运算 + 边界条件
 `timescale 1ns / 1ps
 
 module tb_alu;
     parameter WIDTH = 8;
-    reg [WIDTH-1:0] a, b;
-    reg [3:0] op;
-    wire [WIDTH-1:0] result;
-    wire zero, carry;
-    integer pass, fail;
+    reg  [WIDTH-1:0] a, b;   // 操作数
+    reg  [3:0]       op;     // 操作码
+    wire [WIDTH-1:0] result; // 运算结果
+    wire             zero;   // 零标志
+    wire             carry;  // 进位标志
+    integer pass;            // 通过计数
+    integer fail;            // 失败计数
 
-    alu #(.WIDTH(WIDTH)) uut (.a(a), .b(b), .op(op), .result(result), .zero(zero), .carry(carry));
+    //============ DUT Instantiation ============
+    alu
+        #(
+        .WIDTH(WIDTH)
+        )
+        uut (
+        .a(a),
+        .b(b),
+        .op(op),
+        .result(result),
+        .zero(zero),
+        .carry(carry)
+        );
 
+    //============ Check Task ============
     task check;
         input [255:0] test_name;
         input [WIDTH-1:0] expected_result;
@@ -21,7 +37,8 @@ module tb_alu;
             if (result === expected_result && zero === expected_zero && carry === expected_carry) begin
                 $display("[PASS] %s: result=%d, zero=%b, carry=%b", test_name, result, zero, carry);
                 pass = pass + 1;
-            end else begin
+            end
+            else begin
                 $display("[FAIL] %s: got (result=%d, zero=%b, carry=%b), expected (result=%d, zero=%b, carry=%b)",
                          test_name, result, zero, carry, expected_result, expected_zero, expected_carry);
                 fail = fail + 1;
@@ -29,6 +46,7 @@ module tb_alu;
         end
     endtask
 
+    //============ Test Stimulus ============
     initial begin
         pass = 0; fail = 0;
 

@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 `timescale 1ns / 1ps
 // ============================================================================
 // 模块名称: led_blink
@@ -12,7 +13,8 @@ module led_blink #(
     // 分频系数：时钟频率50MHz，LED每0.5s翻转一次
     // 计算公式: DIV_FREQ = 时钟频率(Hz) × 半周期时间(s) = 50_000_000 × 0.5 = 25_000_000
     parameter DIV_FREQ = 25_000_000
-)(
+)
+(
     input  wire       clk   ,  // 系统时钟，50MHz
     input  wire       rst_n ,  // 全局复位，低电平有效（异步复位）
     output reg        led      // LED输出：1-亮 0-灭（假设高电平有效）
@@ -26,11 +28,13 @@ module led_blink #(
 
     // 计数器逻辑：每个时钟上升沿计数，复位归零，达到上限后归零
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             cnt <= 32'd0;                     // 复位时计数器清零
-        end else if (cnt == DIV_FREQ - 1) begin
+        end
+        else if (cnt == DIV_FREQ - 1) begin
             cnt <= 32'd0;                     // 计数到上限，回零
-        end else begin
+        end
+        else begin
             cnt <= cnt + 1'b1;                // 正常递增计数
         end
     end
@@ -40,9 +44,10 @@ module led_blink #(
     // 实现 0.5s亮 → 0.5s灭 → 0.5s亮 → ... 的闪烁效果
     // -----------------------------------------------------------------------
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             led <= 1'b0;                      // 复位时LED熄灭
-        end else if (cnt == DIV_FREQ - 1) begin
+        end
+        else if (cnt == DIV_FREQ - 1) begin
             led <= ~led;                      // 计数到上限时翻转LED状态
         end
     end

@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // =============================================================================
 // tb_gates_demo.v — gates_demo 模块的完整 testbench
 // 功能：遍历所有输入组合，验证每种门电路的真值表

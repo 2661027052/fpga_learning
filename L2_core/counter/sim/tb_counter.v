@@ -1,22 +1,46 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // Counter testbench v3
 `timescale 1ns / 1ps
 
 module tb_counter;
     parameter WIDTH = 4;
-    reg clk, rst_n, en, up_down, load;
-    reg [WIDTH-1:0] d;
-    wire [WIDTH-1:0] q;
-    wire ovf, at_max, at_zero;
-    integer pass, fail, i;
+    reg              clk;       // 时钟
+    reg              rst_n;     // 异步复位（低有效）
+    reg              en;        // 计数使能
+    reg              up_down;   // 递增/递减
+    reg              load;      // 加载初值使能
+    reg [WIDTH-1:0]  d;         // 加载初值
+    wire [WIDTH-1:0] q;         // 计数值输出
+    wire             ovf;       // 溢出标志
+    wire             at_max;    // 计数值==全1
+    wire             at_zero;   // 计数值==0
+    integer pass;               // 通过计数
+    integer fail;               // 失败计数
+    integer i;                  // 循环变量
 
-    counter #(.WIDTH(WIDTH)) uut (
-        .clk(clk), .rst_n(rst_n), .en(en), .up_down(up_down),
-        .load(load), .d(d), .q(q), .ovf(ovf), .at_max(at_max), .at_zero(at_zero)
-    );
+    //============ DUT Instantiation ============
+    counter
+        #(
+        .WIDTH(WIDTH)
+        )
+        uut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .en(en),
+        .up_down(up_down),
+        .load(load),
+        .d(d),
+        .q(q),
+        .ovf(ovf),
+        .at_max(at_max),
+        .at_zero(at_zero)
+        );
 
+    //============ Clock Generation ============
     always #5 clk = ~clk;
 
+    //============ Test Stimulus ============
     initial begin
         pass = 0; fail = 0;
         clk = 0; rst_n = 0; en = 0; up_down = 1; load = 0; d = 0;
@@ -31,12 +55,14 @@ module tb_counter;
             @(posedge clk); #1;
             if (q !== i[WIDTH-1:0]) begin
                 $display("[FAIL] UP: expected %d, got %d", i, q); fail = fail + 1;
-            end else pass = pass + 1;
+            end
+            else pass = pass + 1;
         end
         @(posedge clk); #1;
         if (q === 0 && ovf === 1) begin
             $display("[PASS] UP overflow: 15->0"); pass = pass + 1;
-        end else begin
+        end
+        else begin
             $display("[FAIL] UP overflow: q=%d ovf=%b", q, ovf); fail = fail + 1;
         end
 
@@ -51,7 +77,11 @@ module tb_counter;
         $display("--- DOWN ---");
         up_down <= 0;
         @(posedge clk); #1;
-        if (q === 4'd9) pass = pass + 1; else begin $display("[FAIL] DOWN 10->9: %d", q); fail = fail + 1; end
+        if (q === 4'd9)
+            pass = pass + 1;
+        else begin
+            $display("[FAIL] DOWN 10->9: %d", q); fail = fail + 1;
+        end
 
         // DOWN underflow
         load <= 1; d <= 4'd2;
@@ -89,10 +119,25 @@ module tb_counter;
 endmodule
 
 module tb_clk_div;
-    reg clk_in, rst_n;
-    wire clk_out;
-    clk_div #(.DIV_FACTOR(4)) uut (.clk_in(clk_in), .rst_n(rst_n), .clk_out(clk_out));
+    reg  clk_in;     // 输入时钟
+    reg  rst_n;      // 异步复位（低有效）
+    wire clk_out;    // 输出时钟
+
+    //============ DUT Instantiation ============
+    clk_div
+        #(
+        .DIV_FACTOR(4)
+        )
+        uut (
+        .clk_in(clk_in),
+        .rst_n(rst_n),
+        .clk_out(clk_out)
+        );
+
+    //============ Clock Generation ============
     always #10 clk_in = ~clk_in;
+
+    //============ Test Stimulus ============
     initial begin
         clk_in = 0; rst_n = 0;
         #100 rst_n = 1;

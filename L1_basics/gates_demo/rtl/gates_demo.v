@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // =============================================================================
 // gates_demo.v — 10种基本门电路的 Verilog 实现
 // 知识点：数字电路基础 (L1)

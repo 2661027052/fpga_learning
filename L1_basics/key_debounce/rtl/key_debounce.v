@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 `timescale 1ns / 1ps
 // ============================================================================
 // 模块名称: key_debounce
@@ -13,7 +14,8 @@
 module key_debounce #(
     // 消抖计数器阈值：20ms @ 50MHz = 50_000_000 × 0.02 = 1_000_000
     parameter DEBOUNCE_CNT = 1_000_000
-)(
+)
+(
     input  wire       clk        ,  // 系统时钟，50MHz
     input  wire       rst_n      ,  // 全局复位，低电平有效
     input  wire       key_in     ,  // 异步按键输入（低电平表示按下）
@@ -42,10 +44,11 @@ module key_debounce #(
     //    第一级的输出已基本稳定，极大降低亚稳态传播概率
     // -----------------------------------------------------------------------
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             key_sync0 <= 1'b1;   // 复位时假设按键未按下（高电平）
             key_sync1 <= 1'b1;
-        end else begin
+        end
+        else begin
             key_sync0 <= key_in;     // 第一级：采样异步输入
             key_sync1 <= key_sync0;  // 第二级：同步后的值
         end
@@ -60,18 +63,21 @@ module key_debounce #(
     assign key_change = (key_sync1 != key_stable);
 
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             debounce_cnt <= 32'd0;
             key_stable   <= 1'b1;   // 复位时默认高电平（未按下）
-        end else if (key_change) begin
+        end
+        else if (key_change) begin
             // 检测到变化：开始计数，计数到DEBOUNCE_CNT后确认变化
             if (debounce_cnt == DEBOUNCE_CNT - 1) begin
                 debounce_cnt <= 32'd0;           // 计数满，清零
                 key_stable   <= key_sync1;       // 更新稳定值为当前同步值
-            end else begin
+            end
+            else begin
                 debounce_cnt <= debounce_cnt + 1'b1;  // 继续计数
             end
-        end else begin
+        end
+        else begin
             // 信号恢复原值（抖动），清零计数器重新等待
             debounce_cnt <= 32'd0;
         end
@@ -84,9 +90,10 @@ module key_debounce #(
     // -----------------------------------------------------------------------
     // 寄存稳定值一拍，用于比较
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             key_stable_d1 <= 1'b1;
-        end else begin
+        end
+        else begin
             key_stable_d1 <= key_stable;
         end
     end
@@ -96,9 +103,10 @@ module key_debounce #(
 
     // 输出按键按下脉冲
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             key_pressed <= 1'b0;
-        end else begin
+        end
+        else begin
             key_pressed <= key_falling;  // 下降沿脉冲赋值给输出
         end
     end

@@ -1,4 +1,4 @@
-# Serial-Parallel 仿真脚本 - 在 ModelSim 中执行: do run.do
+# Serial-Parallel 仿真脚本 — 在 ModelSim 中执行: do run.do
 cd [file dirname [info script]]
 vlib work
 vmap work work

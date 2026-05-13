@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // GPIO 控制 testbench（修正版）
 `timescale 1ns / 1ps
 
@@ -8,7 +9,17 @@ module tb_gpio_ctrl;
     reg [3:0] key_in;
     wire [3:0] led_out;
 
-    gpio_ctrl #(.DEBOUNCE_CNT(10)) uut (.clk(clk), .rst_n(rst_n), .key_in(key_in), .led_out(led_out));
+    gpio_ctrl
+    #(
+        .DEBOUNCE_CNT(10)
+    )
+    uut
+    (
+        .clk    (clk),
+        .rst_n  (rst_n),
+        .key_in (key_in),
+        .led_out(led_out)
+    );
 
     always #10 clk = ~clk;
 

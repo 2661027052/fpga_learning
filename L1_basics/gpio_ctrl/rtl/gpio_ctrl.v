@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 `timescale 1ns / 1ps
 // ============================================================================
 // 模块名称: gpio_ctrl
@@ -39,9 +40,12 @@ module gpio_ctrl #(
     genvar i;
     generate
         for (i = 0; i < 4; i = i + 1) begin : gen_key_debounce
-            key_debounce #(
+            key_debounce
+            #(
                 .DEBOUNCE_CNT(DEBOUNCE_CNT)  // 20ms消抖 @ 50MHz
-            ) u_key_debounce (
+            )
+            u_key_debounce
+            (
                 .clk        (clk            ),
                 .rst_n      (rst_n          ),
                 .key_in     (key_in[i]      ),  // 第i个按键输入
@@ -58,9 +62,10 @@ module gpio_ctrl #(
     reg [3:0] led_reg;  // LED状态寄存器
 
     always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
+        if (!rst_n) begin
             led_reg <= 4'b0000;  // 复位时所有LED熄灭
-        end else begin
+        end
+        else begin
             // 遍历每个按键，有脉冲时翻转对应LED
             // 如果多个按键同时按下，对应的LED各自独立翻转
             if (key_pressed[0]) led_reg[0] <= ~led_reg[0];

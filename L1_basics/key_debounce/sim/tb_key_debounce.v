@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 按键消抖 testbench（修正版 v2 — 无抖动，精确时序验证）
 `timescale 1ns / 1ps
 
@@ -9,8 +10,16 @@ module tb_key_debounce;
     reg  clk, rst_n, key_in;
     wire key_pressed;
 
-    key_debounce #(.DEBOUNCE_CNT(DEBOUNCE_CNT_TEST)) uut (
-        .clk(clk), .rst_n(rst_n), .key_in(key_in), .key_pressed(key_pressed)
+    key_debounce
+    #(
+        .DEBOUNCE_CNT(DEBOUNCE_CNT_TEST)
+    )
+    uut
+    (
+        .clk        (clk),
+        .rst_n      (rst_n),
+        .key_in     (key_in),
+        .key_pressed(key_pressed)
     );
 
     always #10 clk = ~clk;

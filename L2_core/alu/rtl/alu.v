@@ -1,17 +1,20 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // 8-bit ALU — 组合逻辑电路，支持9种运算
 // L2 核心技能：组合逻辑电路设计
 
-module alu #(
+module alu
+    #(
     parameter WIDTH = 8
-)(
+    )
+    (
     input  wire [WIDTH-1:0] a,        // 操作数A
     input  wire [WIDTH-1:0] b,        // 操作数B
     input  wire [3:0]       op,       // 操作码（9种运算）
     output wire [WIDTH-1:0] result,   // 运算结果
     output wire             zero,     // 零标志：result == 0
     output wire             carry     // 进位标志：ADD/SUB时产生进位/借位
-);
+    );
 
     localparam OP_ADD = 4'b0000;  // 加法
     localparam OP_SUB = 4'b0001;  // 减法
@@ -23,8 +26,9 @@ module alu #(
     localparam OP_SRL = 4'b0111;  // 逻辑右移
     localparam OP_SLL = 4'b1000;  // 逻辑左移
 
-    reg [WIDTH:0] extended;  // 扩展1位缓冲进位/借位
+    reg [WIDTH:0] extended;       // 扩展1位缓冲进位/借位
 
+    //============ ALU Operation ============
     always @(*) begin
         extended = 9'd0;
         case (op)

@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // Shift Register testbench
 `timescale 1ns / 1ps
 
@@ -6,23 +7,42 @@ module tb_shift_reg;
 
     parameter WIDTH = 8;
 
-    reg             clk, rst_n, en;
-    reg  [1:0]      mode;
-    reg  [WIDTH-1:0] d;
-    reg             si_left, si_right;
-    wire [WIDTH-1:0] q;
-    wire            so_left, so_right;
+    reg              clk;       // 时钟
+    reg              rst_n;     // 异步复位（低有效）
+    reg              en;        // 移位使能
+    reg  [1:0]       mode;      // 移位模式
+    reg  [WIDTH-1:0] d;         // 并行加载数据
+    reg              si_left;   // 左移串行输入
+    reg              si_right;  // 右移串行输入
+    wire [WIDTH-1:0] q;         // 移位寄存器输出
+    wire             so_left;   // 左移串行输出
+    wire             so_right;  // 右移串行输出
 
-    integer pass, fail;
+    integer pass;               // 通过计数
+    integer fail;               // 失败计数
 
-    shift_reg #(.WIDTH(WIDTH)) uut (
-        .clk(clk), .rst_n(rst_n), .en(en), .mode(mode),
-        .d(d), .si_left(si_left), .si_right(si_right),
-        .q(q), .so_left(so_left), .so_right(so_right)
-    );
+    //============ DUT Instantiation ============
+    shift_reg
+        #(
+        .WIDTH(WIDTH)
+        )
+        uut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .en(en),
+        .mode(mode),
+        .d(d),
+        .si_left(si_left),
+        .si_right(si_right),
+        .q(q),
+        .so_left(so_left),
+        .so_right(so_right)
+        );
 
+    //============ Clock Generation ============
     always #5 clk = ~clk;
 
+    //============ Check Task ============
     task check;
         input [255:0] name;
         input [WIDTH-1:0] exp_q;
@@ -37,6 +57,7 @@ module tb_shift_reg;
         end
     endtask
 
+    //============ Test Stimulus ============
     initial begin
         pass = 0; fail = 0;
         clk = 0; rst_n = 0; en = 0; mode = 0; d = 0; si_left = 0; si_right = 0;

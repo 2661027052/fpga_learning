@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: LicenseRef-Custom-Source-Available  Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
+// SPDX-License-Identifier: LicenseRef-Custom-Source-Available
+// Copyright (c) 2026 2661027052  仅供学习参考，不保证生产环境可用
 // LED 闪烁 testbench（修正版）
 `timescale 1ns / 1ps
 
@@ -9,7 +10,16 @@ module tb_led_blink;
     reg  clk, rst_n;
     wire led;
 
-    led_blink #(.DIV_FREQ(DIV_FREQ_TEST)) uut (.clk(clk), .rst_n(rst_n), .led(led));
+    led_blink
+    #(
+        .DIV_FREQ(DIV_FREQ_TEST)
+    )
+    uut
+    (
+        .clk  (clk),
+        .rst_n(rst_n),
+        .led  (led)
+    );
 
     always #10 clk = ~clk;
 
