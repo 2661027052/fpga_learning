@@ -35,5 +35,8 @@ vlog.opt
 *.sim/
 *.sdk/
 
+# Project-local CLAUDE.md (do not upload)
+CLAUDE.md
+
 # Icarus Verilog artifacts
 *.vvp
