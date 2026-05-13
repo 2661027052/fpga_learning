@@ -1,6 +1,6 @@
 # LED 闪烁模块 (LED Blink)
 
-## 模块概述 (Module Overview)
+## 模块概述 | Module Overview
 
 Verilog 基础语法 — 计数器分频 + LED 输出。
 
@@ -13,15 +13,15 @@ Verilog fundamentals — counter-based clock division and LED output.
 - LED toggles every 0.5 seconds (on/off blinking)
 - Parametric design: adjust `DIV_FREQ` to change blink rate
 
-## 接口说明 (Interface)
+## 接口说明 | Interface
 
 | 端口 Port | 方向 Dir | 位宽 Width | 说明 Description |
 |-----------|----------|------------|------------------|
 | clk       | I        | 1          | 系统时钟 50MHz / System clock 50 MHz |
 | rst_n     | I        | 1          | 异步复位，低电平有效 / Async reset, active low |
-| led       | O        | 1          | LED 输出，1-亮 / 0-灭 / LED output, 1-on / 0-off |
+| led       | O        | 1          | LED 输出，1=亮 / 0=灭 / LED output, 1=on / 0=off |
 
-## 参数说明 (Parameters)
+## 参数说明 | Parameters
 
 | 参数 Parameter  | 默认值 Default | 说明 Description |
 |-----------------|----------------|------------------|
@@ -31,7 +31,7 @@ Verilog fundamentals — counter-based clock division and LED output.
 
 Formula: `DIV_FREQ = clock_frequency x half_cycle_time = 50_000_000 x 0.5 = 25_000_000`
 
-## 仿真说明 (Simulation)
+## 仿真说明 | Simulation
 
 ```bash
 # ModelSim
@@ -44,7 +44,7 @@ vsim -c tb_led_blink -do "run -all; quit"
 
 The testbench overrides `DIV_FREQ` to 5 (instead of 25_000_000) to drastically shorten simulation time, then verifies the LED toggles every 5 clock cycles.
 
-## 设计要点 (Design Highlights)
+## 设计要点 | Design Highlights
 
 - 计数器从 0 计数到 `DIV_FREQ-1`，然后归零重新计数
 - LED 在计数器到达 `DIV_FREQ-1` 时翻转状态
