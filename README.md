@@ -1,70 +1,65 @@
-# FPGA 学习项目 (FPGA Learning Portfolio)
+# FPGA Learning Portfolio
 
-> ⚠️ **许可声明**：本仓库代码采用**源码可用 (Source Available)** 模式，
-> **仅供个人非商业学习与研究使用**。任何商业用途（包括嵌入产品、生产环境部署）
-> 须另行获得作者书面许可。代码不保证适用于任何生产环境，使用者自行承担全部风险。
-> 详见 [LICENSE](LICENSE)。
->
-> **License Notice**: Source Available — **non-commercial learning/research only**.
+> ⚠️ **License Notice**: Source Available — **non-commercial learning/research only**.
 > Any commercial use (including embedding in products, production deployment)
 > requires separate written permission. No warranty. Use at your own risk.
 > See [LICENSE](LICENSE).
 >
-> ---
->
-> 从零到就业的 FPGA 学习轨迹 —— 每个模块含可综合 RTL、仿真 testbench、英文文档
-
-## 项目结构 (Project Structure)
-
-```
-fpga_learning/
-├── L1_basics/        # L1 基础认知 — 门电路、LED、按键消抖、GPIO
-├── L2_core/          # L2 核心技能 — ALU、计数器、移位寄存器、状态机、协议
-├── L3_advanced/      # L3 进阶应用 — 时序约束、CDC、总线协议、高速接口
-└── L4_expert/        # L4 专家领域 — SoC、DDR3、FIR/FFT、UVM
-```
-
-## 学习路线 (Learning Roadmap)
-
-| 层级 | 难度 | 阶段 | 内容 |
-|------|------|------|------|
-| **L1 基础认知** | ⭐~⭐⭐ | 入门 | FPGA 是什么、数字电路基础、Verilog 语法、开发环境 |
-| **L2 核心技能** | ⭐⭐~⭐⭐⭐ | 进阶 | 组合/时序逻辑、状态机、UART/SPI/I2C、仿真与调试 |
-| **L3 进阶应用** | ⭐⭐⭐~⭐⭐⭐⭐ | 精通 | 时序约束、跨时钟域、AXI/AHB 总线、高速接口 |
-| **L4 专家领域** | ⭐⭐⭐⭐~⭐⭐⭐⭐⭐ | 冲刺 | ZYNQ SoC、DDR3、FIR/FFT、SystemVerilog 验证 |
-
-## 每个模块包含 (Each Module)
-
-- `rtl/` — 可综合 Verilog 源码（中文注释）
-- `sim/` — Testbench + 仿真脚本
-- `README.md` — 中英文模块文档
-
-## 工具链 (Toolchain)
-
-- **FPGA**: Xilinx ZYNQ-7000 (启明星开发板)
-- **IDE**: Vivado 2020.1
-- **仿真**: ModelSim
-- **版本管理**: Git + GitHub
-
-## 进度追踪 (Progress)
-
-当前进度：**L2 核心技能** 进行中
-
-| 层级 | 模块数 | 状态 |
-|------|--------|------|
-| L1 基础认知 | 4/4 | ✅ 完成 |
-| L2 核心技能 | 3/15 | 🔧 进行中 |
-| L3 进阶应用 | 0/21 | ⬜ 待开始 |
-| L4 专家领域 | 0/6 | ⬜ 待开始 |
+> 中文用户请参阅 [README_CN.md](README_CN.md)
 
 ---
 
-*开始于 2026-05-10 · 每天更新*
+An FPGA learning trajectory from zero to employable — each module includes synthesizable RTL, simulation testbench, and documentation.
 
-## 商标声明 (Trademark Notice)
+## Project Structure
 
-本仓库中提及的 Xilinx、ZYNQ、Vivado 为赛灵思（现 AMD）商标；ModelSim 为西门子 EDA 商标。
-所有商标归其各自所有者所有。本仓库与上述公司无任何关联或背书关系。
+```
+fpga_learning/
+├── L1_basics/        # L1 Fundamentals — gates, LED, debounce, GPIO
+├── L2_core/          # L2 Core Skills — ALU, counters, shift registers, FSM, protocols
+├── L3_advanced/      # L3 Advanced — timing constraints, CDC, bus protocols, high-speed I/O
+└── L4_expert/        # L4 Expert — SoC, DDR3, FIR/FFT, UVM
+```
 
-All trademarks mentioned are property of their respective owners. This repository is not
+## Learning Roadmap
+
+| Level | Difficulty | Stage | Topics |
+|-------|------------|-------|--------|
+| **L1 Fundamentals** | ⭐~⭐⭐ | Beginner | FPGA basics, digital logic, Verilog syntax, dev environment |
+| **L2 Core Skills** | ⭐⭐~⭐⭐⭐ | Intermediate | Combinational/sequential logic, FSM, UART/SPI/I2C, simulation & debug |
+| **L3 Advanced** | ⭐⭐⭐~⭐⭐⭐⭐ | Proficient | Timing constraints, CDC, AXI/AHB buses, high-speed interfaces |
+| **L4 Expert** | ⭐⭐⭐⭐~⭐⭐⭐⭐⭐ | Expert | ZYNQ SoC, DDR3, FIR/FFT, SystemVerilog verification |
+
+## Each Module Contains
+
+- `rtl/` — synthesizable Verilog source
+- `sim/` — testbench + simulation scripts
+- `README.md` — bilingual module documentation
+
+## Toolchain
+
+- **FPGA**: Xilinx ZYNQ-7000 (Qimingxing board)
+- **IDE**: Vivado 2020.1
+- **Simulation**: ModelSim
+- **VCS**: Git + GitHub
+
+## Progress
+
+Current stage: **L2 Core Skills** in progress
+
+| Level | Modules | Status |
+|-------|---------|--------|
+| L1 Fundamentals | 4/4 | ✅ Done |
+| L2 Core Skills | 3/15 | 🔧 In Progress |
+| L3 Advanced | 0/21 | ⬜ Pending |
+| L4 Expert | 0/6 | ⬜ Pending |
+
+---
+
+*Started 2026-05-10 · Updated daily*
+
+## Trademark Notice
+
+Xilinx, ZYNQ, and Vivado are trademarks of Xilinx (now AMD). ModelSim is a trademark of Siemens EDA.
+All trademarks are property of their respective owners. This repository is not
 affiliated with or endorsed by any of the companies mentioned.
